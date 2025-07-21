@@ -1,10 +1,11 @@
 name: "CD pipleine"
 
 on:
-  Workflows_run:
-    Workflows: ["Sample React CI Pipeline / Workflows"]
+  workflows_run:
+    workflows: ["Sample React CI Pipeline / Workflows"]
     types:
       - completed
+  workflow_dispatch:
 
 jobs:
   deploy:
