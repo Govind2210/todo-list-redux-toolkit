@@ -9,6 +9,7 @@ on:
 jobs:
   deploy:
     runs-on : ubuntu-latest
+    environment: production
 
     steps:
       steps:
@@ -26,8 +27,9 @@ jobs:
         uses: "actions/download-artifact@4"
         with:
           name: build
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ github.token }}
 
       - name: "Deployed in vercel"
-        run: npx vercel --prod --token=$VERCEL_TOKEN --confirm
-        env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: npx vercel --prod --token=${{ secrets.VERCEL_TOKEN }} --confirm --name=cicdproject
+        
