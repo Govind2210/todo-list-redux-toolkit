@@ -1,4 +1,4 @@
-name: "sample reacts CI pipelinw / workflows"
+name: "Sample React CI Pipeline / Workflows"
 
 on:
   push:
@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: "Setup Node Js"
-      - uses: actions/setup-node@v4
+      - name: "Setup Node.js"
+        uses: actions/setup-node@v4
         with:
           node-version: '16'
