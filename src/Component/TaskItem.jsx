@@ -1,5 +1,5 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { removeTask, toggleTask } from "../feature/task/taskSlice";
 
 export const TaskItem = ({ id, task }) => {
