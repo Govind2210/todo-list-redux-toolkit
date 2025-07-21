@@ -21,3 +21,8 @@ jobs:
 
       - name: "Clone the repository"
         uses: actions/checkout@v2
+
+      - name: "Install Dependencies"
+        uses: npm install
+
+      
