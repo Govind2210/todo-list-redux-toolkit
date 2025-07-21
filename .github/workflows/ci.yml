@@ -30,6 +30,9 @@ jobs:
       
       - name: "List directories after installation"
         run: ls 
+
+      - name: "build this setup"
+        run: npm run build
       
       
 
